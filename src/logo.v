@@ -1,17 +1,18 @@
+`default_nettype none
 module logo_test(
+    input clk,
     input a,
     input b,
-    output c);
+    output reg c);
 
-    logo logo_0 ();
-    hackaday logo_1 ();
-    assign c = a & b;
+    (* keep *) LOGO logo ();
+
+    always @(posedge clk)
+        c <= a & b;
+
 endmodule
 
 (* blackbox *)
-module logo();
+module LOGO();
 endmodule
 
-(* blackbox *)
-module hackaday();
-endmodule
