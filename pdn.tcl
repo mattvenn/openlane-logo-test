@@ -77,10 +77,10 @@ set ::rails_start_with "POWER" ;
 set ::stripes_start_with "POWER" ;
 
 pdngen::specify_grid macro {
-    instance "LOGO"
+    instance "logo"
     power_pins ""
     ground_pins ""
-    blockages "met5"
+    blockages "li1 met1 met2 met3 met4 met5"
     straps { 
     } 
     connect {
